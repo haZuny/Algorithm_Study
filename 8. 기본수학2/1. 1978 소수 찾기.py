@@ -1,9 +1,20 @@
 import sys
 
-a, b, c = map(int, sys.stdin.readline().split())
+n = int(sys.stdin.readline())
+ls = list(map(int, sys.stdin.readline().split()))
 
-purePrice = c - b
-if purePrice > 0:
-    print(a // purePrice + 1)
-else:
-    print(-1)
+num = 0
+if (1 in ls):
+    num = -1
+
+
+
+for i in ls:
+    flag = True
+    for j in range(2, i):
+        if i % j == 0:
+            flag = False
+            break;
+    if(flag):
+        num += 1
+print(num)

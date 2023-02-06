@@ -1,0 +1,24 @@
+import sys
+
+m = int(sys.stdin.readline())
+n = int(sys.stdin.readline())
+
+
+list = []
+for i in range(m, n+1):
+    flag = True
+    if i == 1:
+        flag = False
+    for j in range(2, i):
+        if i % j == 0:
+            flag = False
+            break;
+    if(flag):
+        list.append(i)
+
+addNum = 0
+for i in list:
+    addNum += i
+
+print(addNum)
+print(min(list))
