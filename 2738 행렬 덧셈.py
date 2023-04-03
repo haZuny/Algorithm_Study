@@ -14,7 +14,6 @@ for i in range(n):
     for j in range(m):
         arr_new[i].append(arr1[i][j] + arr2[i][j])
 
-print(arr_new)
 for ls1 in arr_new:
     for num in ls1:
         print(num, end=' ')
