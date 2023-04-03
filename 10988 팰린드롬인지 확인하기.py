@@ -7,7 +7,6 @@ flag = 1
 
 while lenWord > 1:
     if word[0] == word[-1]:
-        print(word)
         word = word[1:-1]
         lenWord -= 2
     else:
