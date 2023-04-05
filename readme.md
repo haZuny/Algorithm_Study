@@ -1,8 +1,10 @@
 <div align=center>
 
-## 백준 알고리즘 풀이
-코딩테스트 딱 기다려~~
+### 🌲 백준 알고리즘 풀이 🌷
+코딩테스트 딱 기다려~~ 💣
 
-[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=백준아이디)](https://solved.ac/hj3175791/)
+  <br>
+  
+[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=hj3175791)](https://solved.ac/hj3175791/)
 
 </div>
