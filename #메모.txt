@@ -69,3 +69,15 @@ set()
 값 1개 추가: 변수.add(값)
 값 여러개 추가: 변수.update(추가할 값 리스트)
 특정 값 제거: 변수.remove(값)
+
+=================
+=================
+
+## 덱 자료형
+덱: 양쪽에서 접근 가능한 자료구조(이중연결리스트?)
+from collections import deque
+값 추가: deque.append()
+왼쪽 추가: deque.appendleft()
+pop()
+popleft()
+리스트랑 비슷
