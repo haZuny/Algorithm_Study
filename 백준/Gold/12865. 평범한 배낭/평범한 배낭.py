@@ -1,23 +1,24 @@
-import sys
+'''
+      0  1  2  3  4  5  6  7
+      
+0     0  0  0  0  0  0  0  0
+6,13  0  0  0  0  0  0  13 13
+4,8   0  0  0  0  8  8  13 13
+3,6   0  0  0  6  8  8  13 14
+5,12  0  0  0  6  8  12 13 14
 
-# 물품의 수, 버틸수 있는 무게 입력
-n, k = map(int, sys.stdin.readline().split())
+'''
 
-# 각 물건의 무게, 해당 물건의 가치 입력
-toys = []
-for i in range(n):
-    toys.append(list(map(int, sys.stdin.readline().split())))
-    
-# list[검사한 물건 수][남은 공간] 정의
-list = [[0 for j in range(k+1)] for i in range(n+1)]
+n, k = map(int, input().split())
 
-for k_ in range(1, k+1):
-    for n_ in range(1, n+1):
-        # 검사하는 물건의 무게 > 남은 공간의 경우
-        if toys[n_-1][0] > k_:
-            list[n_][k_] = list[n_-1][k_]
+dp = [[0 for _ in range(k+1)] for _ in range(n+1)]  # 가로: 무게, 세로: 물건들
+
+for i in range(1,n+1):
+    w, v = map(int, input().split())
+    for j in range(1, k+1):
+        if j >= w:
+            dp[i][j] = max(dp[i-1][j], dp[i-1][j-w]+v)
         else:
-            list[n_][k_] = max(list[n_-1][k_], list[n_-1][k_-toys[n_-1][0]] + toys[n_-1][1])
-
-print(list[n][k])
-
+            dp[i][j] = dp[i-1][j]
+#print(dp)
+print(dp[-1][-1])
