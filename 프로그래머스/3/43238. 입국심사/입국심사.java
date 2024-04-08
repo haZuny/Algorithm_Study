@@ -24,7 +24,6 @@ class Solution {
                 if (n_mid >= n) return min;
                 else return max;
             }
-            //System.out.printf("nmid: %d, mid:%d, min: %d, max: %d\n", n_mid, mid, min, max);
             // min, max 갱신
             if(n_mid >= n){
                 max = mid;
