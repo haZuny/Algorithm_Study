@@ -19,7 +19,7 @@ class Main {
 	    
 	    
 	    for (int i=0; i<n; i++){
-	        String s = br.readLine() + " 1";
+	        String s = br.readLine();
 	        String arr[] = s.split(" ");
 	        
 	        
